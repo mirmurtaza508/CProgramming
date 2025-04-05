@@ -33,6 +33,9 @@ void main(){
         if(science > 100){
             printf("marks invalid 'science' = %d \n",science);
         }
+        if(math > 100){
+            printf("marks invalid 'math' = %d \n",math);
+        }
         if(socialScience > 100){
             printf("marks invalid 'socialscience' = %d \n\n",socialScience);
         }
@@ -54,37 +57,40 @@ void main(){
         }else if (percentage >= 85 && percentage <= 89){
             printf("grade        : B+");
         }else if (percentage >= 75 && percentage <= 84){
-            printf("grade        : B");
+            printf("grade         : B");
         }else if (percentage >= 70 && percentage <= 74){
             printf("grade        : C+");
         }else{
                 printf("grade          : C");
         }
 
-    }else if(english < 33 && urdu < 33 && math < 33 && science < 33 && socialScience < 33){
-        printf("percentage      : null\n");
-        printf("result        : fail\n");
-        printf("grade       : null\n");
-    }else{
-        if (english < 33) {
-            strcat(backlog, "English ");
+    }else if (english <= 100 && english >= 0 && urdu <= 100 && urdu >= 0 && science <= 100 && science >= 0 && math <= 100 && math >= 0 && socialScience <= 100 && socialScience >= 0){
+        if(english < 33 && urdu < 33 && math < 33 && science < 33 && socialScience < 33){
+            printf("percentage     : null\n");
+            printf("result         : fail\n");
+            printf("grade          : null\n");
+        }else{
+            if (english < 33) {
+                strcat(backlog, "English ");
+            }
+            if (urdu < 33) {
+                strcat(backlog, "Urdu ");
+            }
+            if (math < 33) {
+                strcat(backlog, "Math ");
+            }
+            if (science < 33) {
+                strcat(backlog, "Science ");
+            }
+            if (socialScience < 33) {
+                strcat(backlog, "SocialScience ");
+            }
+            printf("backlogs       : %s",backlog);
         }
-        if (urdu < 33) {
-            strcat(backlog, "Urdu ");
-        }
-        if (math < 33) {
-            strcat(backlog, "Math ");
-        }
-        if (science < 33) {
-            strcat(backlog, "Science ");
-        }
-        if (socialScience < 33) {
-            strcat(backlog, "SocialScience ");
-        }
+    
+    // if(english < 33 || urdu < 33 || math < 33 || science < 33 || socialScience < 33){
+    //     printf("backlogs       : %s",backlog);
+    // }
     }
-
-if(english < 33 || urdu < 33 || math < 33 || science < 33 || socialScience < 33){
-    printf("backlogs       : %s",backlog);
-}
 
 }
