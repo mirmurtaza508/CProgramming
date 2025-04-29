@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main() {
-    int i, j, size = 0, count = 0,isDiagonal = 1; // Assume it is diagonal;
+    int i, j, size = 0,isDiagonal = 1; // Assume it is diagonal;
     printf("Enter the size of the matrix (e.g., 3, 4, 5): ");
     scanf("%d", &size);
 
